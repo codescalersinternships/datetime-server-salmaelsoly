@@ -14,7 +14,7 @@ func assertEqual(t *testing.T, got, want any) {
 	}
 }
 
-func assertStatusCode(t *testing.T, got,want int){
+func assertStatusCode(t *testing.T, got, want int) {
 	if got != want {
 		t.Errorf("got %v want %v", got, want)
 	}
@@ -33,12 +33,12 @@ func TestDataTimeHandler(t *testing.T) {
 	for _, test := range tests {
 		t.Run("Server Test", func(t *testing.T) {
 			req := httptest.NewRequest(test.method, test.endpoint, test.data)
-			w := httptest.NewRecorder( )
+			w := httptest.NewRecorder()
 			DateTime(w, req)
-			assertStatusCode(t,w.Result().StatusCode,test.statusCode)
-			if test.method == http.MethodGet{
-				actual,_:=io.ReadAll(w.Result().Body)
-				assertEqual(t,string(actual),test.expected)
+			assertStatusCode(t, w.Result().StatusCode, test.statusCode)
+			if test.method == http.MethodGet {
+				actual, _ := io.ReadAll(w.Result().Body)
+				assertEqual(t, string(actual), test.expected)
 			}
 		})
 
