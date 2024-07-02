@@ -1,3 +1,3 @@
-module github.com/codescalersinternships/datetime-server-salmaelsoly.git
+module httpServer
 
 go 1.22.4
