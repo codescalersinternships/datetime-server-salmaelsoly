@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"errors"
-	"github.com/codescalersinternships/datetime-server-salmaelsoly/api/standard"
+	"github.com/codescalersinternships/datetime-server-salmaelsoly/pkg/http"
 	"log/slog"
 	"net/http"
 	"os"
