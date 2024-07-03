@@ -44,3 +44,7 @@ git clone https://github.com/codescalersinternships/datetime-server-salmaelsoly
         curl -q -O - 172.17.0.2:3000/datetime
         curl localhost:3000/datetime
         ```
+- Use Makefile:
+    ```
+    make all
+    ```
