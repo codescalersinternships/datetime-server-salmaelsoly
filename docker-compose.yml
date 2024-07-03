@@ -1,0 +1,13 @@
+name: go-servers
+
+services:
+  gin:
+    ports:
+      - 3000:8080
+    build: 
+      dockerfile: Dockerfile.gin
+  http:
+    ports:
+      - 5000:8080
+    build:
+      dockerfile: Dockerfile.http
