@@ -28,5 +28,11 @@ jobs:
       - name: Format
         uses: Jerome1337/gofmt-action@v1.0.5
 
+      - name: checkout repo
+        uses: actions/checkout@main
+
       - name: Test
-        run: go test -v ./...
+        run: make run-tests
+
+      - name: build
+        run: make build
