@@ -45,6 +45,33 @@ git clone https://github.com/codescalersinternships/datetime-server-salmaelsoly
         curl localhost:3000/datetime
         ```
 - Use Makefile:
+    1.
+    ```bash
+    make build
     ```
+    To build both servers
+    2.
+    ```bash
+    make format
+    ```
+    To format the code
+    3.
+    ```bash
+    make lints
+    ```
+    To run the linter
+    4.
+    ```bash
+    make run-tests
+    ```
+    To run tests
+    5.
+    ```bash
+    make build-docker
+    ```
+    To run docker containers
+    6.
+    ```bash
     make all
     ```
+    To run all make listed commands
