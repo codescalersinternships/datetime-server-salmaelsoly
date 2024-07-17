@@ -28,7 +28,7 @@ func TestDataTimeHandler(t *testing.T) {
 		expected   string
 	}{
 		{http.MethodGet, "/datetime", nil, http.StatusOK, time.Now().Format(time.UnixDate)},
-		{http.MethodPost, "/datetime", nil, http.StatusBadRequest, ""},
+		{http.MethodPost, "/datetime", nil, http.StatusMethodNotAllowed, ""},
 	}
 	for _, test := range tests {
 		t.Run("Server Test", func(t *testing.T) {
